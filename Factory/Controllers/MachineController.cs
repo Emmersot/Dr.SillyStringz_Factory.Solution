@@ -1,8 +1,9 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
-using ProjectName.Models;
+using Factory.Models;
 using System.Collections.Generic;
 using System.Linq;
+// using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Factory.Controllers
 {
@@ -27,7 +28,7 @@ namespace Factory.Controllers
     }
 
     [HttpPost]
-    public ActionResult Create(Machine Machine)
+    public ActionResult Create(Machine machine)
     {
       _db.Machines.Add(machine);
       _db.SaveChanges();
