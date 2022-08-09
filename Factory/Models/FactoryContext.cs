@@ -4,11 +4,11 @@ namespace Factory.Models
 {
   public class FactoryContext : DbContext
   {
-    public DbSet<Category> Categories { get; set; }
-    public DbSet<Item> Items { get; set; }
-    public DbSet<CategoryItem> CategoryItem { get; set; }
+    public DbSet<Machine> Machines { get; set; }
+    public DbSet<Engineer> Engineers { get; set; }
+    public DbSet<MachineEngineer> MachineEngineer { get; set; }
 
-    public SillyStringzContext(DbContextOptions options) : base(options) { }
+    public FactoryContext(DbContextOptions options) : base(options) { }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
