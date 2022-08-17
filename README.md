@@ -2,7 +2,7 @@
 
 #### By _**Tyler Emmerson**_  
 
-#### _{MVC application to keep track of machine repairs}_  
+#### _MVC application to keep track of machine repairs_  
 
 ---
 ## Technologies Used
@@ -21,20 +21,43 @@
 ---
 ## Description
 
-_{This program will provide a way for Dr.SillyStringz to keep track of machine repairs.}_
+_This program will provide a way for Dr.SillyStringz to keep track of machine repairs._
 
 ---
 ## Setup/Installation Requirements
-
 * Install *`Microsoft .NET SDK`*
+* Install *`MySQL Workbench`*
+<details>
+<summary><strong>Add appsettings.json</strong></summary>
+Navigate to  
+    <pre>Dr.SillyStringz_Solution
+    ├── <strong>Factory</strong></pre>
+
+* $ touch appsettings.json 
+* Open the appsettings.json and enter:
+
+```
+{
+    "ConnectionStrings": {
+        "DefaultConnection": "Server=Localhost;Port=3306;database=[Database-Name];uid=root;pwd=[YOUR-PASSWORD];"
+    }
+}
+``` 
+
+</details>
+
 <details>
 <summary><strong>For Running</strong></summary>
 Navigate to  
     <pre>Dr.SillyStringz_Solution
     ├── <strong>Factory</strong></pre>
-    
- Run ```$ dotnet install``` in the console 
+
+
+ Run ```$ dotnet restore``` in the console 
+ Run ```$ dotnet ef migration add Initial``` in the console 
+ Run ```$ dotnet ef database update``` in the console  
  Run ```$ dotnet run``` in the console
+ Visit <http://localhost:5000>
  
 </details>
 
@@ -45,7 +68,7 @@ This program was built using *`Microsoft .NET SDK 5.0.401`*, and may not be comp
 ---
 ## Known Bugs
 
-* _Issue with routing not opening Machines and Engineers._
+* _None._
 
 ## License
 
